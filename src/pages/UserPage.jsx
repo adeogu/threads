@@ -1,10 +1,12 @@
-import UserHeader from '../componenets/UserHeader';
+import UserHeader from "../componenets/UserHeader";
+import UserPost from "../componenets/UserPost";
 
-
-const UserPage = () =>{
-    return <>
-        <UserHeader />
-    </>
+const UserPage = () => {
+	return (
+		<>
+			<UserHeader />
+			<UserPost />
+		</>
+	);
 };
 export default UserPage;
-

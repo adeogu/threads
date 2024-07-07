@@ -15,9 +15,17 @@ import {
 import { BsInstagram } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
 
+/**
+ * React component that renders a user profile header using Chakra UI components.
+ * Includes user's name, avatar, follower count, and links to social media.
+ * Provides functionality to copy the current URL to the clipboard and display a success toast notification.
+ */
 const UserHeader = () => {
 	const toast = useToast();
 
+	/**
+	 * Function to copy the current URL to the clipboard and show a success toast.
+	 */
 	const copyURL = () => {
 		const currentURL = window.location.href;
 		navigator.clipboard.writeText(currentURL).then(() => {
@@ -31,7 +39,7 @@ const UserHeader = () => {
 		});
 	};
 
-	// Returning JSX to render the UserHeader
+	// JSX to render the UserHeader
 	return (
 		<VStack gap={4} alignItems={"start"}>
 			<Flex justifyContent={"space-between"} w={"full"}>
@@ -102,8 +110,9 @@ const UserHeader = () => {
 				</Flex>
 				<Flex
 					flex={1}
-					borderBottom={"1.5px solid white"}
+					borderBottom={"1px solid grey"}
 					justifyContent={"center"}
+					color={"grey.light"}
 					pb="3"
 					cursor={"pointer"}
 				>
