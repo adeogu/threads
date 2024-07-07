@@ -1,11 +1,36 @@
-import { VStack, Flex, Text, Box, Link } from "@chakra-ui/react"; // Import from "@chakra-ui/react" instead of "@chakra-ui/layout"
-import { MenuButton, Portal } from "@chakra-ui/react"; // Additional imports from "@chakra-ui/react"
-import { Avatar } from "@chakra-ui/react"; // Correct import for Avatar
-import { BsInstagram } from "react-icons/bs"; // Import from react-icons
-import { CgMoreO } from "react-icons/cg"; // Import from react-icons
+import {
+	VStack,
+	Flex,
+	Text,
+	Box,
+	Link,
+	Menu,
+	MenuButton,
+	MenuList,
+	MenuItem,
+	Avatar,
+	Portal,
+	useToast,
+} from "@chakra-ui/react";
+import { BsInstagram } from "react-icons/bs";
+import { CgMoreO } from "react-icons/cg";
 
-// Defining the UserHeader functional component
 const UserHeader = () => {
+	const toast = useToast();
+
+	const copyURL = () => {
+		const currentURL = window.location.href;
+		navigator.clipboard.writeText(currentURL).then(() => {
+			toast({
+				title: "Success.",
+				status: "success",
+				description: "Profile link copied.",
+				duration: 3000,
+				isClosable: true,
+			});
+		});
+	};
+
 	// Returning JSX to render the UserHeader
 	return (
 		<VStack gap={4} alignItems={"start"}>
@@ -28,7 +53,6 @@ const UserHeader = () => {
 					</Flex>
 				</Box>
 
-				{/* Empty Box to take up remaining space */}
 				<Box flex="1" />
 
 				<Box ml="auto">
@@ -37,17 +61,16 @@ const UserHeader = () => {
 			</Flex>
 
 			<Text>Co-founder, executive chairman and CEO of Meta</Text>
-			<Flex w={"full "} justifyContent={"space-between"}>
+			<Flex w={"full"} justifyContent={"space-between"}>
 				<Flex gap={1} alignItems={"center"}>
-					<Text color={"grey"}> 2.3k Followers</Text>
-					<Text color={"grey"}>·</Text>
-
-					<Box w="-2" h="1" bg={"grey.light"} borderRadius={"full"}></Box>
-					<Link color={"grey"}>Instagram.com</Link>
+					<Text color={"gray.500"}>2.3k Followers</Text>
+					<Text color={"gray.500"}>·</Text>
+					<Box w="2px" h="1" bg={"gray.500"} borderRadius={"full"}></Box>
+					<Link color={"gray.500"}>Instagram.com</Link>
 				</Flex>
 				<Flex>
 					<Box className="icon-container">
-						<div class="icon"></div>
+						<div className="icon"></div>
 						<BsInstagram size={30} cursor={"pointer"} />
 					</Box>
 
@@ -57,8 +80,10 @@ const UserHeader = () => {
 								<CgMoreO size={30} cursor={"pointer"} />
 							</MenuButton>
 							<Portal>
-								<MenuList>
-									<MenuItem>Copy Link</MenuItem>
+								<MenuList bg={"grey.dark"}>
+									<MenuItem bg={"grey.dark"} onClick={copyURL}>
+										Copy Link
+									</MenuItem>
 								</MenuList>
 							</Portal>
 						</Menu>
