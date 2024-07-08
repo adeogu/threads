@@ -6,6 +6,7 @@ import { Button } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 import Actions from "../componenets/Actions";
 import { useState } from "react";
+import Comment from "../componenets/Comment";
 
 const PostPage = () => {
 	const [liked, setLiked] = useState(false);
@@ -66,7 +67,37 @@ const PostPage = () => {
 			</Flex>
 
 			<Divider my={4} />
-			<Comment />
+			<Comment
+				comment={"Nice!"}
+				createdAt="2d"
+				likes={100}
+				username="johndoet"
+				userAvatar="https://bit.ly/sage-adebayo"
+			/>
+
+			<Comment
+				comment={"Hola From Spain"}
+				createdAt="1d"
+				likes={786}
+				username="janeeedoe"
+				userAvatar="https://bit.ly/ryan-florence"
+			/>
+
+			<Comment
+				comment={"One Piece is the best"}
+				createdAt="3d"
+				likes={73}
+				username="armaadoe"
+				userAvatar="https://bit.ly/prosper-baba"
+			/>
+
+			<Comment
+				comment={"Looks really good!"}
+				createdAt="2d"
+				likes={344}
+				username="sallydoe"
+				userAvatar="https://bit.ly/code-beast"
+			/>
 		</>
 	);
 };
