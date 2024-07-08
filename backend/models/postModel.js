@@ -48,4 +48,11 @@ const postSchema = mongoose.Schema({
   //allows us to see when the post was created and when the post was updated
 });
 
+const Post = mongoose.model("Post", postSchema);
+
+export default Post;
+
+
+
+
 
