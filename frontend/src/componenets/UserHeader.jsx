@@ -66,7 +66,7 @@ const UserHeader = () => {
         <Box ml="auto">
           <Avatar
             name="Mark Zuckerberg"
-            src="/frontend/zuck-avatar.png"
+            src="/zuck-avatar.png"
             size={{
               base: "md",
               md: "xl",

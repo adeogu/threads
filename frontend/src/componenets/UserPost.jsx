@@ -20,11 +20,7 @@ const UserPost = ({ postImage, postTitle, likes, replies }) => {
         {/* Container for user avatars */}
         <Flex flexDirection={"column"} alignItems={"center"}>
           {/* Main user avatar */}
-          <Avatar
-            size="md"
-            name="Mark Zuckerberg"
-            src="/frontend/zuck-avatar.png"
-          />
+          <Avatar size="md" name="Mark Zuckerberg" src="/zuck-avatar.png" />
           {/* Vertical line between avatars */}
           <Box w="1px" h={"full "} bg="gray.light" my={2}></Box>
           <Box position={"relative"} w={"full"}>
@@ -68,7 +64,7 @@ const UserPost = ({ postImage, postTitle, likes, replies }) => {
               <Text fontSize={"sm"} fontWeight={"bold"}>
                 markzuckerberg
               </Text>
-              <Image src="/frontend/verified.png" w={"4"} ml={1} />
+              <Image src="/verified.png" w={"4"} ml={1} />
             </Flex>
             {/* Post time and options icon */}
             <Flex gap={4} alignItems={"center"}>

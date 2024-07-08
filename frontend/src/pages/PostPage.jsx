@@ -15,16 +15,12 @@ const PostPage = () => {
     <>
       <Flex>
         <Flex w={"full"} alignItems={"center"} gap={3}>
-          <Avatar
-            src="/frontend/zuck-avatar.png"
-            size={"md"}
-            name="Mark Zuckerberg"
-          />
+          <Avatar src="/zuck-avatar.png" size={"md"} name="Mark Zuckerberg" />
           <Flex>
             <Text fontSize={"sm"} fontWeight={"bold"}>
               markzuckerberg
             </Text>
-            <Image src="/frontend/verified.png" w="4" h="4" ml={4} />
+            <Image src="/verified.png" w="4" h="4" ml={4} />
           </Flex>
         </Flex>
         <Flex gap={4} alignItems={"center"}>
@@ -42,7 +38,7 @@ const PostPage = () => {
         border={"1px solid"}
         borderColor={"gray.200"}
       >
-        <Image src={"/frontend/post1.png"} w={"full"} />
+        <Image src={"/post1.png"} w={"full"} />
       </Box>
 
       <Flex gap={3} my={3}>

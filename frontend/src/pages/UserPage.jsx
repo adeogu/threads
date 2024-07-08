@@ -8,19 +8,19 @@ const UserPage = () => {
       <UserPost
         likes={1200}
         replies={481}
-        postImage="/frontend/post1.png"
+        postImage="/post1.png"
         postTitle="Lets Talk about threads"
       />
       <UserPost
         likes={455}
         replies={22}
-        postImage="/frontend/post2.png"
+        postImage="/post2.png"
         postTitle="Nice Tutorial"
       />
       <UserPost
         likes={4545}
         replies={55}
-        postImage="/frontend/post3.png"
+        postImage="/post3.png"
         postTitle="I love this guy"
       />
       <UserPost likes={678} replies={234} postTitle="Lets Talk about threads" />
