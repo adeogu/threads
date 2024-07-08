@@ -15,11 +15,7 @@ const Header = () => {
         cursor={"pointer"} // Changing cursor to pointer on hover
         alt="logo" // Alternative text for the image
         w={6} // Setting the width of the image
-        src={
-          colorMode === "dark"
-            ? "/frontend/light-logo.svg"
-            : "/frontend/dark-logo.svg"
-        } // Dynamically setting the image source based on color mode
+        src={colorMode === "dark" ? "/light-logo.svg" : "/dark-logo.svg"} // Dynamically setting the image source based on color mode
         onClick={toggleColorMode} // Toggle color mode on image click
       />
     </Flex>
