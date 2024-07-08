@@ -41,5 +41,11 @@ const postSchema = mongoose.Schema({
         type: String,
       },
     },
-  ],
+  ]
+},{
+
+  timestamps: true,
+  //allows us to see when the post was created and when the post was updated
 });
+
+
