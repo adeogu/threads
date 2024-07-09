@@ -1,8 +1,17 @@
 import express from "express";
-import { signupUser } from "../controllers/userControllers.js";
+import {
+  followUnFollowUser,
+  loginUser,
+  logoutUser,
+  signupUser,
+} from "../controller/userController.js";
+import protectRoute from "../middlewares/protectRoute.js";
 
 const router = express.Router();
 
-router.get("/signup", signupUser);
+router.post("/signup", signupUser);
+router.post("/login", loginUser);
+router.post("/logout", logoutUser);
+router.post("/follow/:id", protectRoute, followUnFollowUser); // Toggle state(follow/unfollow)
 
 export default router;
