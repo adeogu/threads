@@ -2,8 +2,10 @@ import User from "../models/userModel.js";
 import Post from "../models/postModel.js";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
+import { v2 as cloudinary } from "cloudinary";
 import generateTokenAndSetCookie from "../utils/helpers/generateTokenAndSetCookie.js";
 // userRoutes.js
+
 // Use the imported functions in your routes
 
 const getUserProfile = async (req, res) => {
@@ -153,6 +155,7 @@ const followUnFollowUser = async (req, res) => {
 const updateUser = async (req, res) => {
   const { name, email, username, password, bio } = req.body;
   let { profilePic } = req.body;
+  //if we send a new profilePic, we will delete the old one from cloudinary
 
   const userId = req.user._id;
   try {
