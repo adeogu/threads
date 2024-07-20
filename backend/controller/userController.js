@@ -155,7 +155,6 @@ const followUnFollowUser = async (req, res) => {
 const updateUser = async (req, res) => {
   const { name, email, username, password, bio } = req.body;
   let { profilePic } = req.body;
-  //if we send a new profilePic, we will delete the old one from cloudinary
 
   const userId = req.user._id;
   try {
@@ -214,12 +213,11 @@ const updateUser = async (req, res) => {
   }
 };
 
-// userController.js
 export {
+  getUserProfile,
   signupUser,
   loginUser,
   logoutUser,
   followUnFollowUser,
   updateUser,
-  getUserProfile,
 };

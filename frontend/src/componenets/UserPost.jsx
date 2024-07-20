@@ -76,7 +76,7 @@ const UserPost = ({ postImage, postTitle, likes, replies }) => {
           </Flex>
 
           {/* Post text */}
-          <Text fontsize={"sm"}>{postTitle}</Text>
+          <Text fontSize={"sm"}>{postTitle}</Text>
           {postImage && (
             <Box
               borderRadius={6}

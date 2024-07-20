@@ -12,8 +12,7 @@ console.log("MONGO_URI:", process.env.MONGO_URI); // Add this line to check the 
 
 const app = express();
 //create a express server
-const PORT = process.env.PORT || 3000;
-const mongoURI = process.env.MONGO_URI;
+const PORT = process.env.PORT || 3001;
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
