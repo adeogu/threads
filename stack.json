@@ -1,0 +1,6 @@
+{
+  "frontend": ["React", "Chakra UI"],
+  "backend": ["Node.js", "Express.js"],
+  "database": "MongoDB",
+  "realTime": "Socket.io"
+}
