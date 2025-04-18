@@ -1,6 +1,6 @@
 {
-  "frontend": ["React", "Chakra UI"],
-  "backend": ["Node.js", "Express.js"],
-  "database": "MongoDB",
-  "realTime": "Socket.io"
+  "frontend": "React",
+  "backend": "Flask",
+  "db": "PostgreSQL",
+  "aws_region": "us-east-1"
 }
